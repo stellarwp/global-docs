@@ -1,6 +1,8 @@
 # Setting up Strauss in your project
 
-[Strauss](https://github.com/BrianHenryIE/strauss) is a library for creating namespaced classes and constants on other libraries included within a WordPress project.
+[Strauss](https://github.com/BrianHenryIE/strauss) is a library for creating namespaced classes and constants on other libraries included within a WordPress project. This way, if your WordPress project is run alongside another WordPress project that has overlapping dependencies, they won't actually conflict!
+
+Adding Strauss to your `composer.json` is only slightly more complicated than adding a typical dependency.
 
 ## Including Strauss as a dev dependency via composer
 
