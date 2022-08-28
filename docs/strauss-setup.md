@@ -59,15 +59,14 @@ You'll need to add the Strauss autoloader to your project so that all of the rel
 require_once __DIR__ . '/vendor/strauss/autoload.php';
 ```
 
-## Tell PHPStan to ignore classes from your namespace
+## Tell PHPStan about your `vendor/strauss` directory
 
-PHPStan may not be able to find the classes that you are using from the `vendor/strauss` directory. To tell PHPStan to [ignore](https://phpstan.org/user-guide/ignoring-errors) those classes, you'll need to add the following to your `phpstan.neon.dist` file.
+PHPStan doesn't know about your `vendor/strauss` directory by default. Luckily, you can add a `scanDirectories` to `parameters` in your `phpstan.neon.dist` file and you'll be good to go!
 
-Here's an example of what we've added to the [stellarwp/schema](https://github.com/stellarwp/schema) repository to ignore PHPStan errors specific to the [stellarwp/db](https://github.com/stellarwp/db) library:
+Here's an example:
 
 ```
 parameters:
-	ignoreErrors:
-		- '#^Call to static method .+ on an unknown class StellarWP\\Schema\\StellarWP\\DB\\DB\.$#'
-		- '#^Caught class StellarWP\\Schema\\StellarWP\\DB\\Database\\.+ not found\.$#'
+	scanDirectories:
+		- vendor/strauss
 ```
