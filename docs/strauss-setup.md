@@ -29,7 +29,7 @@ There are a number of configuration settings that might be useful for your proje
 },
 ```
 
-When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/strauss` directory in your project. _Note: you'll want to commit that directory into your project._
+When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/strauss` directory in your project.
 
 ## Ensuring auto-running of Strauss
 
