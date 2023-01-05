@@ -20,6 +20,7 @@ There are a number of configuration settings that might be useful for your proje
 "extra": {
 	"strauss": {
 		"target_directory": "vendor-prefixed",
+		"namespace_prefix": "Boom\\Shakalaka\\",
 		"classmap_prefix": "Boom_Shakalaka_",
 		"constant_prefix": "BOOM_SHAKALAKA_",
 		"packages": [
