@@ -31,7 +31,7 @@ There are a number of configuration settings that might be useful for your proje
 },
 ```
 
-When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/strauss` directory in your project.
+When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/vendor-prefixed` directory in your project.
 
 ## Ensuring auto-running of Strauss
 
@@ -58,17 +58,17 @@ Additionally, you can run this manually via `composer run strauss`.
 You'll need to add the Strauss autoloader to your project so that all of the relevant classes are available. If you were to put it in a WordPress plugin's bootstrap file (the main file in the base directory of your plugin), you'd add a line like so:
 
 ```php
-require_once __DIR__ . '/vendor/strauss/autoload.php';
+require_once __DIR__ . '/vendor/vendor-prefixed/autoload.php';
 ```
 
-## Tell PHPStan about your `vendor/strauss` directory
+## Tell PHPStan about your `vendor/vendor-prefixed` directory
 
-PHPStan doesn't know about your `vendor/strauss` directory by default. Luckily, you can add a `scanDirectories` to `parameters` in your `phpstan.neon.dist` file and you'll be good to go!
+PHPStan doesn't know about your `vendor/vendor-prefixed` directory by default. Luckily, you can add a `scanDirectories` to `parameters` in your `phpstan.neon.dist` file and you'll be good to go!
 
 Here's an example:
 
 ```
 parameters:
 	scanDirectories:
-		- vendor/strauss
+		- vendor/vendor-prefixed
 ```
