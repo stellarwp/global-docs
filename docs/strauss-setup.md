@@ -4,12 +4,68 @@
 
 Adding Strauss to your `composer.json` is only slightly more complicated than adding a typical dependency.
 
-## Including Strauss as a dev dependency via composer
+* [Including Strauss](#including-strauss)
+  * [As a `.phar` file](#as-a-phar-file)
+  * [As a dev dependency via composer (not recommended)](#as-a-dev-dependency-via-composer-not-recommended)
+* [Adding your configuration](#adding-your-configuration)
+* [Ensuring auto-running of Strauss](#ensuring-auto-running-of-strauss)
+* [Add the Strauss autoloader](#add-the-strauss-autoloader)
+* [Tell PHPStan about your `vendor/vendor-prefixed` directory](#tell-phpstan-about-your-vendorvendor-prefixed-directory)
 
-Firstly, you'll need to require Strauss via composer:
+## Including Strauss
+
+### As a `.phar` file
+
+To reduce the potentials for conflicts while using Strauss in your project, it is recommended that Straus is added to your project as a `.phar` file during the build process. There are a couple of small steps to make this possible.
+
+#### Create a `bin/.gitkeep` file
+
+This ensures that there is a `bin/` directory in the root of your project. This is where the `.phar` file will go.
+
+```bash
+mkdir bin
+touch bin/.gitkeep
+```
+
+#### `.gitignore` the `.phar` file
+
+Add the following to your `.gitignore`:
+
+```bash
+bin/strauss.phar
+```
+
+#### Create a `composer.json` `scripts` entry for Strauss
+
+In your `composer.json`, add `strauss` to the `scripts` section:
+
+```json
+"scripts": {
+	"strauss": [
+		"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.13.0/strauss.phar",
+		"@php bin/strauss.phar"
+	]
+}
+```
+
+### As a dev dependency via composer (not recommended)
+
+If you prefer to include Strauss as a dev dependency, you can still do so. You mileage may vary when you include it this way.
 
 ```
 composer require --dev brianhenryie/strauss
+```
+
+#### Create a `composer.json` `scripts` entry for Strauss
+
+In your `composer.json`, add `strauss` to the `scripts` section:
+
+```json
+"scripts": {
+	"strauss": [
+		"vendor/bin/strauss"
+	]
+}
 ```
 
 ## Adding your configuration
@@ -39,9 +95,6 @@ Adding the following to your `composer.json` file will ensure that Strauss is ru
 
 ```
 "scripts": {
-	"strauss": [
-			"vendor/bin/strauss"
-	],
 	"post-install-cmd": [
 			"@strauss"
 	],
