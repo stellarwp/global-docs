@@ -82,12 +82,17 @@ There are a number of configuration settings that might be useful for your proje
 		"delete_vendor_files": true,
 		"packages": [
 			"stellarwp/REPO_NAME"
-		]
+		],
+		"excluded_from_prefix": {
+			"file_patterns": []
+		}
 	}
 },
 ```
 
 When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/vendor-prefixed` directory in your project.
+
+**Note:** The `exclude_from_prefix` argument in the strauss configuration is _highly_ recommended to avoid issues with `Psr` packages. By default, Strauss excludes those packages from namespacing.
 
 ## Ensuring auto-running of Strauss
 
