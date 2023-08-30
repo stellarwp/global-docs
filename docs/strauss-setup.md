@@ -85,7 +85,9 @@ There are a number of configuration settings that might be useful for your proje
 		],
 		"excluded_from_prefix": {
 			"file_patterns": []
-		}
+		},
+		"include_modified_date": false,
+		"include_author": false
 	}
 },
 ```
