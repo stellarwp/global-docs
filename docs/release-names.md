@@ -14,9 +14,12 @@ git-flow is not flexible enough for competing roadmaps and team size, this namin
   * [Do the release names need to be in alphabetical order?](#do-the-release-names-need-to-be-in-alphabetical-order)
   * [Does each release need to start with a different letter?](#does-each-release-need-to-start-with-a-different-letter)
   * [Ohhhh...so we don't need to use a new letter for each month?](#ohhhhso-we-dont-need-to-use-a-new-letter-for-each-month)
+  * [What do we do when a new year rolls around?](#what-do-we-do-when-a-new-year-rolls-around)
   * [My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?](#my-team-started-with-a-theme-but-we-are-bored-of-it-and-want-to-switch-part-way-through-the-year-is-that-okay)
   * [Won't this model break down a bit if a release is delayed too long?](#wont-this-model-break-down-a-bit-if-a-release-is-delayed-too-long)
   * [Wait. Which type of releases get release names?](#wait-which-type-of-releases-get-release-names) (spoiler: feature and maintenance releases, not hotfixes)
+  * [How should this be organized?](#how-should-this-be-organized)
+  * [My brand has multiple teams. Do we all use the same theme and list of names?](#my-brand-has-multiple-teams-do-we-all-use-the-same-theme-and-list-of-names)
 
 ## The concept
 
@@ -112,6 +115,12 @@ alphabetical.
 
 Exactly. That's not necessary. You can even skip letters, too!
 
+### What do we do when a new year rolls around?
+
+That's a great question! If you have a theme that is massive enough to continue going through multiple years, that's fine.
+A new year is a great time to think of a new theme to keep stuff interesting, though! They key thing is, you need enough
+potential names to get you through all of the potential releases throughout the year.
+
 ### My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?
 
 Totally. The only requirement is that the release names continue to be alphabetical. For example, if your team was doing
@@ -139,3 +148,22 @@ gets the release name `release/X23.potato.1`. If another hotfix is needed, it ge
 Why? Because hotfixes are usually unplanned and need to be released as soon as possible. They occur so rapidly that it
 is incredibly unlikely that anything will jump in front of them. Additionally, spotting problematic releases is much easier
 when scanning release through the year if there are near-identical names for those hotfixes.
+
+### How should this be organized?
+
+It is _highly_ recommended that a brand have a master spreadsheet for its releases - regardless of whether or not releases
+are named alphabetically. This allows for a single location to see what released when and with what version numbers.
+
+### My brand has multiple teams. Do we all use the same theme and list of names?
+
+You can, but it isn't advisable. The goal of release names is to reduce the pain of release name management and different
+teams tend to have different priorities, roadmaps, and blockers. Coordinating release names between all of the potential
+moving targets would be difficult. Possible? Yes. But difficult.
+
+Instead, if each team has their own prefix and theme, they can manage their own release names without needing to coordinate.
+When it comes down to it, it isn't about mapping a release name to a version number - it is about coodinating and orchestrating
+releases within a team that is flexible enough to deal with the chaos of product development.
+
+If the brand has a reasonable spreadsheet for tracking releases; the timing of those releases and what was included; and
+the version numbers of the products involved, then the teams should have all the information they need to understand what
+happened.
