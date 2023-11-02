@@ -10,16 +10,17 @@ git-flow is not flexible enough for competing roadmaps and team size, this namin
   * [Scenario 2: Combined releases](#scenario-2-combined-releases)
 * [Selecting thematic names](#selecting-thematic-names)
   * [Selecting names for a release](#selecting-names-for-a-release)
-* [FAQ](#faq)
-  * [Do the release names need to be in alphabetical order?](#do-the-release-names-need-to-be-in-alphabetical-order)
-  * [Does each release need to start with a different letter?](#does-each-release-need-to-start-with-a-different-letter)
-  * [Ohhhh...so we don't need to use a new letter for each month?](#ohhhhso-we-dont-need-to-use-a-new-letter-for-each-month)
-  * [What do we do when a new year rolls around?](#what-do-we-do-when-a-new-year-rolls-around)
-  * [My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?](#my-team-started-with-a-theme-but-we-are-bored-of-it-and-want-to-switch-part-way-through-the-year-is-that-okay)
-  * [Won't this model break down a bit if a release is delayed too long?](#wont-this-model-break-down-a-bit-if-a-release-is-delayed-too-long)
-  * [Wait. Which type of releases get release names?](#wait-which-type-of-releases-get-release-names) (spoiler: feature and maintenance releases, not hotfixes)
-  * [How should this be organized?](#how-should-this-be-organized)
-  * [My brand has multiple teams. Do we all use the same theme and list of names?](#my-brand-has-multiple-teams-do-we-all-use-the-same-theme-and-list-of-names)
+  * [Example release names](#example-release-names)
+* [Other FAQs](#other-faqs)
+  * [Q: Do the release names need to be in alphabetical order?](#q-do-the-release-names-need-to-be-in-alphabetical-order)
+  * [Q: Does each release need to start with a different letter?](#q-does-each-release-need-to-start-with-a-different-letter)
+  * [Q: Ohhhh...so we don't need to use a new letter for each month?](#q-ohhhhso-we-dont-need-to-use-a-new-letter-for-each-month)
+  * [Q: What do we do when a new year rolls around?](#q-what-do-we-do-when-a-new-year-rolls-around)
+  * [Q: My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?](#q-my-team-started-with-a-theme-but-we-are-bored-of-it-and-want-to-switch-part-way-through-the-year-is-that-okay)
+  * [Q: Won't this model break down a bit if a release is delayed too long?](#q-wont-this-model-break-down-a-bit-if-a-release-is-delayed-too-long)
+  * [Q: Wait. Which type of releases get release names?](#q-wait-which-type-of-releases-get-release-names)
+  * [Q: How should this be organized?](#q-how-should-this-be-organized)
+  * [Q: My brand has multiple teams. Do we all use the same theme and list of names?](#q-my-brand-has-multiple-teams-do-we-all-use-the-same-theme-and-list-of-names)
 
 ## The concept
 
@@ -100,28 +101,61 @@ name that is alphabetically between the two releases.
 
 A safe padding distance of ~5 between release names should accommodate most release shenanigans on large teams.
 
-## FAQ
+### Example release names
 
-### Do the release names need to be in alphabetical order?
+Here's a theme of vegetables that could be used for a year. The words formatted `like this` are the planned releases and
+the non-decorated items are left as options for unexpected releases.
+
+* `acorn-squash`
+* alfalfa-sprout
+* amaranth
+* arugala
+* asparagus
+* bamboo-shoot
+* `bean`
+* beet
+* bell-pepper
+* bok-choy
+* broccoli
+* brussels-sprout
+* `butter-lettuce`
+* cabbage
+* callaloo
+* carrot
+* cassava
+* cauliflower
+* `celery`
+* chard
+* cherry-tomato
+* chives
+* collard-greens
+* corn
+* `cucumber`
+* curly-kale
+* ...etc
+
+## FAQs
+
+#### Q: Do the release names need to be in alphabetical order?
 
 Yes! That's the point :) It allows you to look back at the year and know what order the releases were in.
 
-### Does each release need to start with a different letter?
+#### Q: Does each release need to start with a different letter?
 
 Nope! You could have all releases in the year start with the letter A if you wanted. Just as long as they are
 alphabetical.
 
-### Ohhhh...so we don't need to use a new letter for each month?
+#### Q: Ohhhh...so we don't need to use a new letter for each month?
 
 Exactly. That's not necessary. You can even skip letters, too!
 
-### What do we do when a new year rolls around?
+#### Q: What do we do when a new year rolls around?
 
 That's a great question! If you have a theme that is massive enough to continue going through multiple years, that's fine.
 A new year is a great time to think of a new theme to keep stuff interesting, though! They key thing is, you need enough
 potential names to get you through all of the potential releases throughout the year.
 
-### My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?
+### Q: My team started with a theme but we are bored of it and want to switch part way through the year. Is that okay?
 
 Totally. The only requirement is that the release names continue to be alphabetical. For example, if your team was doing
 releases using **Lord of the Rings** as the theme from January through March and the most recent release was `release/X23.gandalf`
@@ -129,7 +163,7 @@ and your team was switching to **Ninja Turtles**. Even though it'd be SUPER temp
 release name for April...you can't do that. You need a name that is alphabetically after `gandalf`. So `release/X23.leonardo` is
 the better choice.
 
-### Won't this model break down a bit if a release is delayed too long?
+### Q: Won't this model break down a bit if a release is delayed too long?
 
 Sort of. There are sometimes releases that need to be pushed out much further than initially planned and you might run
 out of words that are alphabetically between releases. In those cases, it is simple to just rename the delayed release to
@@ -139,7 +173,7 @@ The same thing applies if a release needs to spill over to the new year. Example
 for December and it gets moved to January, you'll need to rename it to `release/X24.SOMETHING` where _SOMETHING_ is a word
 in your theme that is alphabetically early. (like a word that starts with A or something).
 
-### Wait. Which type of releases get release names?
+### Q: Wait. Which type of releases get release names?
 
 Feature releases and maintenance releases. Hotfix releases should have a `.[number]` appended to the previous named release,
 incrementing that number for each hotfix. Example: `release/X23.potato` was released and a hotfix was needed. That hotfix
@@ -149,12 +183,12 @@ Why? Because hotfixes are usually unplanned and need to be released as soon as p
 is incredibly unlikely that anything will jump in front of them. Additionally, spotting problematic releases is much easier
 when scanning release through the year if there are near-identical names for those hotfixes.
 
-### How should this be organized?
+### Q: How should this be organized?
 
 It is _highly_ recommended that a brand have a master spreadsheet for its releases - regardless of whether or not releases
 are named alphabetically. This allows for a single location to see what released when and with what version numbers.
 
-### My brand has multiple teams. Do we all use the same theme and list of names?
+### Q: My brand has multiple teams. Do we all use the same theme and list of names?
 
 You can, but it isn't advisable. The goal of release names is to reduce the pain of release name management and different
 teams tend to have different priorities, roadmaps, and blockers. Coordinating release names between all of the potential
