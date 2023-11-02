@@ -127,8 +127,8 @@ the non-decorated items are left as options for unexpected releases.
 * `celery`
 * chard
 * cherry-tomato
-* chives
-* collard-greens
+* chive
+* collard-green
 * corn
 * `cucumber`
 * curly-kale
