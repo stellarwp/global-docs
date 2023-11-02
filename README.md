@@ -4,4 +4,5 @@ These are global docs that are applicable to multiple repositories / libraries /
 
 ## Table of contents
 
+* [Release names](/docs/release-names.md)
 * [Strauss setup](/docs/strauss-setup.md)
