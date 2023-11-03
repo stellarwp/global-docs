@@ -27,7 +27,7 @@ git-flow is not flexible enough for competing roadmaps and team size, this namin
 This approach stands on the shoulders of companies that have already solved this problem - like Google with Android - 
 and use approachable words for release naming that will be alphabetical throughout the year.
 
-### The structure
+## The structure
 
 The anatomy of a release name is as follows:
 
@@ -136,20 +136,20 @@ the non-decorated items are left as options for unexpected releases.
 
 ## FAQs
 
-#### Q: Do the release names need to be in alphabetical order?
+### Q: Do the release names need to be in alphabetical order?
 
 Yes! That's the point :) It allows you to look back at the year and know what order the releases were in.
 
-#### Q: Does each release need to start with a different letter?
+### Q: Does each release need to start with a different letter?
 
 Nope! You could have all releases in the year start with the letter A if you wanted. Just as long as they are
 alphabetical.
 
-#### Q: Ohhhh...so we don't need to use a new letter for each month?
+### Q: Ohhhh...so we don't need to use a new letter for each month?
 
 Exactly. That's not necessary. You can even skip letters, too!
 
-#### Q: What do we do when a new year rolls around?
+### Q: What do we do when a new year rolls around?
 
 That's a great question! If you have a theme that is massive enough to continue going through multiple years, that's fine.
 A new year is a great time to think of a new theme to keep stuff interesting, though! They key thing is, you need enough
