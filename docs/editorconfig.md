@@ -1,4 +1,4 @@
-# Editorconfig
+# EditorConfig
 
 `.editorconfig` ensures consistent coding styles and settings across different editors and IDEs.
 
