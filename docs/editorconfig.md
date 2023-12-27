@@ -27,11 +27,14 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 4
-tab_width = 4
-indent_style = space
+indent_style = tab
 insert_final_newline = true
+tab_width = 4
 trim_trailing_whitespace = true
+
+[**.{jshintrc,json,scss-lint,yml}]
+indent_style = space
+indent_size = 4
 
 [*.txt]
 trim_trailing_whitespace = false
