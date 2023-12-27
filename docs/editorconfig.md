@@ -1,18 +1,18 @@
 # EditorConfig
 
-`.editorconfig` ensures consistent coding styles and settings across different editors and IDEs.
+`.editorconfig` helps maintain consistent coding styles and settings across different editors and IDEs. This includes things like indentation and character encoding.
 
-These are settings like indentation and character encoding. Normalizing them makes collaboration smoother and code more uniform.
+Using it helps with smoother collaboration and more uniform code.
 
 ## How to Use
 
-- Copy the contents of the code below.
-- Create an `.editorconfig` file at the root of your project.
-- Paste the contents into the file.
+- Copy the code below.
+- Create an `.editorconfig` file in your project's root.
+- Paste the copied code into this file.
 
-These steps will automatically configure your text editor or IDE settings according to the defined rules when you open the project.
+This will set your text editor or IDE to follow these rules automatically when you open the project.
 
-In some cases, you may have to install a plugin for your editor to enable this feature, or quit and restart your editor for it to take effect.
+**Note:** You might need to install a plugin for your editor, or restart it for the changes to take effect.
 
 ## `.editorconfig` File
 
