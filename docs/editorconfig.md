@@ -36,6 +36,6 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.txt]
+[**.{txt,md}]
 trim_trailing_whitespace = false
 ```
