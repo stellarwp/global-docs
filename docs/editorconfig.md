@@ -32,7 +32,7 @@ insert_final_newline = true
 tab_width = 4
 trim_trailing_whitespace = true
 
-[**.{jshintrc,json,scss-lint,yml}]
+[**.{jshintrc,json,scss-lint,yml,yaml}]
 indent_style = space
 indent_size = 4
 
