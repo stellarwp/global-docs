@@ -6,3 +6,4 @@ These are global docs that are applicable to multiple repositories / libraries /
 
 * [Release names](/docs/release-names.md)
 * [Strauss setup](/docs/strauss-setup.md)
+* [`.editorconfig`](/docs/editorconfig.md)
