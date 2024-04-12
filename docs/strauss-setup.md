@@ -42,8 +42,9 @@ In your `composer.json`, add `strauss` to the `scripts` section:
 ```json
 "scripts": {
 	"strauss": [
-		"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.13.0/strauss.phar",
+		"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.16.0/strauss.phar",
 		"@php bin/strauss.phar"
+                "@php composer dump-autoload"
 	]
 }
 ```
@@ -79,13 +80,10 @@ There are a number of configuration settings that might be useful for your proje
 		"namespace_prefix": "Boom\\Shakalaka\\",
 		"classmap_prefix": "Boom_Shakalaka_",
 		"constant_prefix": "BOOM_SHAKALAKA_",
-		"delete_vendor_files": true,
+		"delete_vendor_packages": true,
 		"packages": [
 			"stellarwp/REPO_NAME"
 		],
-		"excluded_from_prefix": {
-			"file_patterns": []
-		},
 		"include_modified_date": false,
 		"include_author": false
 	}
@@ -94,7 +92,7 @@ There are a number of configuration settings that might be useful for your proje
 
 When Strauss is run, this configuration will cause it to execute for the `stellarwp/REPO_NAME` package and all of its dependencies, placing them inside of the `vendor/vendor-prefixed` directory in your project.
 
-**Note:** The `exclude_from_prefix` argument in the strauss configuration is _highly_ recommended to avoid issues with `Psr` packages. By default, Strauss excludes those packages from namespacing.
+**Note:** The `exclude_from_prefix` argument in the strauss configuration can be used to avoid issues with packages you don't want to prefix with your project's namespace. Previously this was used to fix issues with PSR packages, but Strauss has removed that exclusion since v0.14.0.
 
 ## Ensuring auto-running of Strauss
 
