@@ -42,7 +42,7 @@ In your `composer.json`, add `strauss` to the `scripts` section:
 ```json
 "scripts": {
 	"strauss": [
-		"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.16.0/strauss.phar",
+		"test -f ./bin/strauss.phar || curl -o bin/strauss.phar -L -C - https://github.com/BrianHenryIE/strauss/releases/download/0.18.0/strauss.phar",
 		"@php bin/strauss.phar"
                 "@php composer dump-autoload"
 	]
